@@ -1,3 +1,6 @@
+##########################
+# Изучаю как работать с sqlite3
+
 import sqlite3
 
 # from logpas import x

@@ -20,9 +20,11 @@ def action():
 #     path = input('Введите путь: ')
 #     return path
 
-def path_file():
-    base = sqlite3.connect('new.db')
-    base.execute('CREATE TABLE IF NOT EXISTS {} (Name PRIMARY KEY, phone, info)'.format('data'))
-    base.commit()
-    path = 'new.db'
-    return path
+###################################
+
+# def path_file():
+#     base = sqlite3.connect('new.db')
+#     base.execute('CREATE TABLE IF NOT EXISTS {} (Name PRIMARY KEY, phone, info)'.format('data'))
+#     base.commit()
+#     path = 'new.db'
+#     return path
