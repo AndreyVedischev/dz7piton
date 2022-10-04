@@ -3,6 +3,7 @@ import view
 import sqlite3
 
 
+
 # def read_file(path : str):
 #     path = 'data.txt'
 #     with open(path,encoding = 'utf-8', mode = 'r') as file:
@@ -52,14 +53,15 @@ def read_file(base):
 def find_in_file(base):
     base = sqlite3.connect('new.db')
     cur = base.cursor()
-    r = cur.execute('SELECT phone FROM data WHERE Name == ?', (view.name,)).fetchone()
+    r = cur.execute('SELECT phone FROM data WHERE Name == ?', (view.find_contact(),)).fetchone()
+    
     print(r)
 
 
 def write_in_file(base):
     base = sqlite3.connect('new.db')
     cur = base.cursor()
-    cur.execute('INSERT INTO data (Name, phone, info) VALUES (?,?,?)', (view.name, view.about, view.number))
+    cur.execute('INSERT INTO data (Name, phone, info) VALUES (?,?,?)', (view.add_contact(), ))
     base.commit()
     base.close()
 
@@ -67,6 +69,6 @@ def write_in_file(base):
 def delete_in_file(base):
     base = sqlite3.connect('new.db')
     cur = base.cursor()
-    cur.execute('DELETE FROM data WHERE Name == ?', (view.name,))
+    cur.execute('DELETE FROM data WHERE Name == ?', (view.find_contact(),))
     base.commit()
     base.close()

@@ -1,11 +1,11 @@
 import sqlite3
 
-# def add_contact():
-#     name = input('Введите имя контакта: ')
-#     about = input('Введите описание контакта: ')
-#     number = input('Введите номер контакта: ')
-#     col = name + ', ' + about + ', ' + number + ';'
-#     return col
+def add_contact():
+    name = input('Введите имя контакта: ')
+    about = input('Введите описание контакта: ')
+    number = input('Введите номер контакта: ')
+    col = name + ', ' + about + ', ' + number + ';'
+    return col
 
 def find_contact():
     name = input('Введите имя контакта: ')
@@ -21,12 +21,6 @@ def action():
 #     return path
 
 ###################################
-
-
-name = input('Введите имя контакта: ')
-about = input('Введите описание контакта: ')
-number = input('Введите номер контакта: ')
-    
     
 
 def path_file():
